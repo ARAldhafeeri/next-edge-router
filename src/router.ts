@@ -1,8 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
 
+type Context = { params: Promise<{ path: string[] }> | { path: string[] } };
+
 // Type definitions
 export type Handler = (
-  req: NextRequest
+  req: NextRequest,
+  context?: Context
 ) => Promise<NextResponse> | NextResponse;
 
 export type Middleware = (
