@@ -50,3 +50,16 @@ router.post(createUser, validationMiddleware({ required: ["name", "email"] }));
 // Export route handlers for Next.js
 export const { GET, POST } = router.export();
 ```
+
+## Installation
+
+```
+npm i next-edge-router
+
+```
+
+## Run tests
+
+```
+npm run tests
+```
